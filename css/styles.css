@@ -45,7 +45,7 @@ p {
 This adjusts the specific class (that seperates this section from other "p" selectors)
 and only adjusts the class (.intro)
 This is more specific than "p" */
-.intro {
+p.intro {
    font-size: 14px;
    color: blue;
    line-height: default;
@@ -54,7 +54,7 @@ This is more specific than "p" */
 /* This is the tag modifier
 This adjusts the specific tag (that seperates this section from other "p" selectors and ".intro" classes)
 This is more specific than ".intro" and "p"  */
-#summit {
+h2#summit {
    font-size: 32px;
    color: #FCA300;
 }
