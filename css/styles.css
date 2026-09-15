@@ -28,7 +28,7 @@ h1 {
 - This adjusts the properties of h2 */
 h2 { 
    font-family: cursive;
-   font-sizing: 40px;
+   font-size: 40px;
    color: purple;
 }
 
