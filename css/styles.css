@@ -1,3 +1,71 @@
 /* MTM1544 Week 1: your stylesheet.
    This file is already linked from index.html. Write your rules below.
    Start by changing the body background colour and saving, to confirm the link works. */
+
+/* This is the regular selector modifier
+- Adjusts the visual properties of the h1 (initially in the code order) */
+h1 {
+   font-size: 24px;
+   line-height: 1.5;
+   border: solid 5px green;
+   padding: 1em;
+   margin: 2em;
+   font-family: serif;
+}
+
+/* This is cascading order error / example
+- This replaces / overrides the previous code for h1 */
+h1 {
+   font-size: 70px;
+   line-height: 2;
+   border: solid 5px black;
+   padding: 2em;
+   margin: 1em;
+   font-family: sans-serif;
+}
+
+/* This is the regular selector modifier
+- This adjusts the properties of h2 */
+h2 { 
+   font-family: cursive;
+   font-sizing: 40px;
+   color: purple;
+}
+
+/* This is the regular selector modifier
+- This adjusts the properties for everything listed as "p(aragraph)" */
+p {
+   font-size: 18px;
+   line-height: 3;
+   color: green;
+   font-family: serif;
+}
+
+/* This is the class modifier
+This adjusts the specific class (that seperates this section from other "p" selectors)
+and only adjusts the class (.intro)
+This is more specific than "p" */
+.intro {
+   font-size: 14px;
+   color: blue;
+   line-height: default;
+}
+
+/* This is the tag modifier
+This adjusts the specific tag (that seperates this section from other "p" selectors and ".intro" classes)
+This is more specific than ".intro" and "p"  */
+#summit {
+   font-size: 32px;
+   color: #FCA300;
+}
+
+/* This is the group selector
+This edits all elements within the comma string
+This means that h1 - #summit and .intro should be Helvetica and 0.5 margin.
+This is also cascading with h1 since it changes the initial sans-serif to Helvetica along with margins. */
+h1, #summit, .intro {
+   font-family: Helvetica;
+   line-height: 0.5;
+}
+
+
