@@ -4,23 +4,38 @@
 
 /* This is the regular selector modifier
 - Adjusts the visual properties of the h1 (initially in the code order) */
-h1 {
+*{
+   box-sizing: border-box;
+}
+
+
+div {
    font-size: 24px;
    line-height: 1.5;
    border: solid 5px green;
-   padding: 1em;
-   margin: 2em;
+   padding: 1rem;
    font-family: serif;
 }
 
 /* This is cascading order error / example
 - This replaces / overrides the previous code for h1 */
+div {
+   background-color: red;
+   width: 50VW;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 60%;
+   border: solid, black;
+   margin-bottom: 20px;
+}
+
 h1 {
-   font-size: 70px;
-   line-height: 2;
-   border: solid 5px black;
-   padding: 2em;
-   margin: 1em;
+   background-color: blue;
+   line-height: 1;
+   border-radius: 80%;
+   border: 5px, dashed, black;
+   padding: 30px;
+   font-size: 2rem;
    font-family: sans-serif;
 }
 
@@ -49,6 +64,7 @@ p.intro {
    font-size: 14px;
    color: blue;
    line-height: default;
+   margin-top: 30px;
 }
 
 /* This is the tag modifier
@@ -63,7 +79,7 @@ h2#summit {
 This edits all elements within the comma string
 This means that h1 - #summit and .intro should be Helvetica and 0.5 margin.
 This is also cascading with h1 since it changes the initial sans-serif to Helvetica along with margins. */
-h1, #summit, .intro {
+#summit, .intro {
    font-family: Helvetica;
    line-height: 0.5;
 }
